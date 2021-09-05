@@ -2,7 +2,7 @@
 #define __MONEYCALC_HPP__
 #include <string>
 
-const int MAX_PRODUCTS = 3
+const int MAX_PRODUCTS = 3 //how many the person can list
 
 class Prodcut 
   {
@@ -10,7 +10,7 @@ class Prodcut
     std::string Name;
     double Price;
     unsigned int Rating;
-    long budget;
+    const long budget;
     
     public:
     void setName(std::string n) {Name = n;}
@@ -19,7 +19,7 @@ class Prodcut
 
     std::string getName() {return Name;}
     double setPrice() {return Price;}
-    unsigned int setRating {return Rating;}
+    unsigned int setRating() {return Rating;}
   };
 
   Product lowestPrice(Product prod[], int size );
