@@ -1,11 +1,12 @@
 #include <iomanip>
 #include <iostream>
-#include <iostrea>
-#include "moneyCalc.hpp"
+#include <string>
+#include "calc.hpp"
 
 int main()
  {
-   Product prod[MAX_PRODCUTS]
+   
+   Product prod[MAX_NUM_PRODUCTS];
    
    std::string type;
    long budget;
@@ -14,15 +15,15 @@ int main()
     std::cout << "What are you planning to buy?" << "\n";
     std::cin >> type;
     
-   for (int i = 0; i < MAX_PRODUCTS; i++)
+   for (int i = 0; i < MAX_NUM_PRODUCTS; i++)
     {
-    std::string name
+    std::string name;
     double price;
     unsigned int rating;
     
     std::cout << "Product #" << i + 1 <<  "\n";
     std::cout << "Enter the name: ";
-    std::getLine(std::cin,name);
+    std::cin >> name;
 
     std::cout << "Enter the price: ";
     std::cin >> price;
@@ -31,14 +32,14 @@ int main()
     std::cin >> rating;
     std::cin.ignore();
 
-    Prod[i].setName();
-    Prod[i].setPrice();
-    Prod[i].setRating();
+    prod[i].setName(name);
+    prod[i].setPrice(price);
+    prod[i].setRating(rating);
 
     }
-    Product lowest = lowestPrice(prod, MAX_PRODUCTS )
+    
+    Product lowest = lowestPrice(prod[], MAX_NUM_PRODUCTS)
     std::cout << "lowest is " << lowest.getName() << "\n";
-
 
 
 
